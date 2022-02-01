@@ -1,0 +1,13 @@
+<div *ngFor="let user of userList; let i = index ">
+    {{user.id}}
+    {{user.name}}
+    <button (click)="selectUser(user)">éditer</button>
+    <button (click)="del(user.id!)">X</button>
+</div>
+
+<input type="text" [(ngModel)]="username">
+<button type="button" (click)="save()">save</button>
+
+<div *ngIf="selectedUser">
+    <app-user-detail [selected]="selectedUser" (userModified)="modifyUser"></app-user-detail>
+</div>

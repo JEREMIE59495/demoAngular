@@ -1,0 +1,7 @@
+
+<h2>formulaire</h2>
+<p>id: {{selected.id}}</p>
+<form [formGroup]="formulaire" (onSubmit)="update()">
+    <input type="text " formControlName="name" placeholder={{selected.name}}>{{user.name}}
+<button type="button" (click)="update()"> ok</button>
+</form>
